@@ -1,0 +1,53 @@
+/* Globals Area */
+:root {
+  --primary-color: black;
+  --secondary-color: white;
+  --text-color: "";
+  --border-color: #e0e0dd;
+  --border-active-color: #596d48;
+  --main-content-padding: 30px;
+}
+* {
+  transition: 0.2s all;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Layout Area */
+.wrapper {
+  background-color: red;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.form-section {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* form Item Area */
+.form-item {
+  margin-bottom: 2rem;
+}
+input {
+  appearance: none;
+  outline: none;
+  border: none;
+  border: 2px solid var(--border-color);
+  padding: 6px 3px;
+  border-radius: 5px;
+}
+label {
+  display: block;
+}
+input:focus {
+  border: 2px solid var(--border-active-color);
+}
+input:focus:invalid {
+  border: 2px solid red;
+}
