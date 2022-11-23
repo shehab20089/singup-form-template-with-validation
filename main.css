@@ -8,10 +8,10 @@
 :root {
   --primary-color: black;
   --secondary-color: white;
-  --text-color: "";
+  --text-color: #202020;
   --border-color: #e0e0dd;
   --border-active-color: #596d48;
-  --main-content-padding: 30px;
+  --main-content-padding: 20px;
 }
 * {
   transition: 0.2s all;
@@ -19,6 +19,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  color: var(--text-color);
 }
 /* Layout Area */
 .wrapper {
@@ -33,9 +34,18 @@
   flex-direction: column;
   justify-content: center;
 }
-form {
+.form-wrapper {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding-block: var(--main-content-padding);
+  padding-inline: calc(3 * var(--main-content-padding));
+}
+.form-items {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+h3 {
+  font-size: 25px;
+  margin-block: 2rem;
 }
 /* form Item Area */
 .form-item {
@@ -48,13 +58,35 @@ input {
   border: 2px solid var(--border-color);
   padding: 6px 3px;
   border-radius: 5px;
+  width: 300px;
 }
 label {
   display: block;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 input:focus {
   border: 2px solid var(--border-active-color);
 }
 input:focus:invalid {
   border: 2px solid red;
+}
+.form-actions {
+  padding: var(--main-content-padding);
+}
+button {
+  padding: 10px;
+  background-color: var(--border-active-color);
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding-inline: 50px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+button:hover {
+  opacity: 0.9;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
