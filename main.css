@@ -46,6 +46,38 @@
 h3 {
   font-size: 25px;
   margin-block: 2rem;
+  font-weight: 500;
+}
+/* First Column Area */
+.image-bg {
+  background-image: url(assets/images/halie-west-25xggax4bSA-unsplash.jpg);
+  background-size: cover;
+}
+h1 {
+  color: white;
+  font-size: 100px;
+  font-family: NorseFont, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  background-color: rgba(0, 0, 0, 0.392);
+  margin-block-start: 200px;
+}
+h1 > img {
+  width: 100px;
+  height: auto;
+}
+/* Page Text Section */
+.site-desc {
+  font-size: 25px;
+  font-weight: 500;
+  padding: var(--main-content-padding);
+  padding-inline: calc(3 * var(--main-content-padding));
+  max-width: 900px;
+}
+p + p {
+  margin-top: 2rem;
 }
 /* form Item Area */
 .form-item {
@@ -72,7 +104,8 @@ input:focus:invalid {
   border: 2px solid red;
 }
 .form-actions {
-  padding: var(--main-content-padding);
+  margin-top: 2rem;
+  padding-inline: calc(3 * var(--main-content-padding));
 }
 button {
   padding: 10px;
@@ -89,4 +122,9 @@ button {
 button:hover {
   opacity: 0.9;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--border-active-color);
 }
