@@ -23,7 +23,6 @@
 }
 /* Layout Area */
 .wrapper {
-  background-color: red;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -82,6 +81,7 @@ p + p {
 /* form Item Area */
 .form-item {
   margin-bottom: 2rem;
+  position: relative;
 }
 input {
   appearance: none;
@@ -127,4 +127,10 @@ a {
   text-decoration: none;
   font-weight: 600;
   color: var(--border-active-color);
+}
+
+.error-message {
+  color: red;
+  position: absolute;
+  bottom: -25px;
 }
