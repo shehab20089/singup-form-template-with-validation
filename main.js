@@ -84,9 +84,11 @@ function showErrorMessage(field, message = "") {
   const errorElement = document.createElement("div");
   errorElement.classList.add("error-message");
   errorElement.textContent = message;
+  field.classList.add("invalid");
   field.parentNode.appendChild(errorElement);
 }
 function removeOldMessage(field) {
   const oldErrMessage = field.parentNode.querySelector(".error-message");
+  field.classList.remove("invalid");
   if (oldErrMessage) oldErrMessage.remove();
 }

@@ -100,7 +100,8 @@ label {
 input:focus {
   border: 2px solid var(--border-active-color);
 }
-input:focus:invalid {
+input:focus:invalid,
+input:focus.invalid {
   border: 2px solid red;
 }
 .form-actions {
@@ -133,4 +134,30 @@ a {
   color: red;
   position: absolute;
   bottom: -25px;
+}
+/* Mobile Styles  */
+@media screen and (max-width: 1042px) {
+  :root {
+    --main-content-padding: 5px;
+  }
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .form-items {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    margin-block-start: 0px;
+    padding-inline: 10px;
+  }
+  .error-message {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  input {
+    width: 200px;
+  }
 }
